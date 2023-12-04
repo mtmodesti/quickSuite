@@ -1,0 +1,88 @@
+<div
+class="wrapper">
+    <header>
+        <span>QuickSuiteFlix</span>
+        <mat-icon>remove_red_eye</mat-icon>
+    </header>
+<section>
+    <span>
+
+        Coming Soon
+    </span>
+    <div
+    class="relaseDEetails"
+    >
+        <span>  Coming Soon movie name</span>
+        <button mat-raised-button color="primary">Synopsis</button>
+        <button mat-raised-button color="primary">Add to Watchlist </button>
+        <mat-icon>remove_red_eye</mat-icon>
+
+
+
+      
+    </div>
+</section>
+
+<main>
+  
+    <div
+    class="moviesWrapper"
+    >
+        <div
+        class="releases"
+        >
+            <div
+            class="sectionMovieWrapper"
+            >
+        
+            <span
+            class="title"
+            >Releases</span>
+            
+            <div
+            class="groupMovieWrapper"
+            >
+            
+            
+            <div
+            class="movieWrapper"
+                *ngFor="let movie of latestReleases; index as i"
+                #movieWrapper
+              
+                >
+                <div
+                class="actions"
+                >
+                <button mat-raised-button color="primary">Synopsis
+
+                </button>
+                <div
+                class="watchList"
+                >
+                <mat-icon
+                
+                >remove_red_eye</mat-icon>
+
+                    <button mat-raised-button color="primary">Add to Watchlist 
+                        
+     
+                        
+                    </button>
+                </div>
+              
+
+            </div>
+            </div>
+                
+            </div>
+        
+        </div>
+
+        </div>
+    </div>
+
+
+
+    
+</main>
+</div>

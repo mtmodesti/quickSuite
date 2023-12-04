@@ -1,0 +1,34 @@
+{
+    "latestReleases": [
+        {
+            "name":"Avengers",
+            "genre":["Action","Sci-fi"],
+            "synopsis":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus.",
+            "url":"assets/images/Avengers.png"
+        },
+        {
+            "name":"Guardians of The Galaxy",
+            "genre":["Action", "Sci-fi"],
+            "synopsis":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus.",
+            "url":"assets/images/GuardiansOfTheGalaxy.png"
+        },
+        {
+            "name":"Knives Out",
+            "genre":["Comedy","Mystery","Crime"],
+            "synopsis":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus.",
+            "url":"assets/images/KnivesOut.png"
+        },
+        {
+            "name":"Spider Man",
+            "genre":["Action","Adventure"],
+            "synopsis":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus.",
+            "url":"assets/images/SpiderMan.png"
+        },
+        {
+            "name":"Tenet",
+            "genre":["Action"],
+            "synopsis":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus.",
+            "url":"assets/images/Tenet.png"
+        }
+    ]
+}
