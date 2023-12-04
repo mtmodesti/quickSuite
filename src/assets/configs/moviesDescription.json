@@ -1,4 +1,12 @@
 {
+    "mainMovie": [
+      {
+        "name":"Black Panther",
+        "genre":["Action","Adventure"],
+        "synopsis":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "url":"assets/images/blackPanther.jpg"
+      }
+    ],
     "latestReleases": [
         {
             "name":"Avengers",

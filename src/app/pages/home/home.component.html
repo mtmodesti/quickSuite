@@ -4,27 +4,25 @@ class="wrapper">
         <span>QuickSuiteFlix</span>
         <mat-icon>remove_red_eye</mat-icon>
     </header>
-<section>
+<section
+#section
+>
     <span>
-
         Coming Soon
     </span>
     <div
     class="relaseDEetails"
     >
         <span>  Coming Soon movie name</span>
-        <button mat-raised-button color="primary">Synopsis</button>
-        <button mat-raised-button color="primary">Add to Watchlist </button>
-        <mat-icon>remove_red_eye</mat-icon>
-
-
-
-      
+        <button mat-raised-button color="primary" (click)="handleWatchList(mainMovie[0])">Add to Watchlist </button>
+        <span
+        (click)="handleMoviePage(mainMovie[0])"
+        *ngIf="handleWatchLIstThumbnail(mainMovie[0])"
+        
+        >On my watchlist</span>
     </div>
 </section>
-
 <main>
-  
     <div
     class="moviesWrapper"
     >
@@ -34,7 +32,6 @@ class="wrapper">
             <div
             class="sectionMovieWrapper"
             >
-        
             <span
             class="title"
             >Releases</span>
@@ -42,47 +39,34 @@ class="wrapper">
             <div
             class="groupMovieWrapper"
             >
-            
-            
             <div
             class="movieWrapper"
                 *ngFor="let movie of latestReleases; index as i"
                 #movieWrapper
-              
                 >
                 <div
                 class="actions"
                 >
-                <button mat-raised-button color="primary">Synopsis
 
-                </button>
                 <div
                 class="watchList"
                 >
-                <mat-icon
-                
-                >remove_red_eye</mat-icon>
+                <button
+                (click)="handleWatchList(movie)"
+                mat-raised-button color="primary">
+                {{handleWatchLIstThumbnail(movie) ? 'Remove from' : 'Add to'}} watchlist
+                </button>
+                <span
+                *ngIf="handleWatchLIstThumbnail(movie)"
+                (click)="handleMoviePage(movie)"
+                >On my watchlist</span>
 
-                    <button mat-raised-button color="primary">Add to Watchlist 
-                        
-     
-                        
-                    </button>
                 </div>
-              
-
             </div>
             </div>
-                
             </div>
-        
         </div>
-
         </div>
     </div>
-
-
-
-    
 </main>
 </div>
