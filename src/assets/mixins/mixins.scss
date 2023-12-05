@@ -1,0 +1,16 @@
+@import "../colors/colors.scss";
+
+@mixin titleStyle {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 52px;
+  color: $green3;
+  text-align: center;
+}
+
+@mixin textStyle {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  color: $green1;
+  text-indent: 1.5em;
+  text-align: justify;
+}

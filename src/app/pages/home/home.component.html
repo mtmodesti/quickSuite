@@ -1,0 +1,83 @@
+<div class="wrapper">
+  <header>
+    <span>QuickSuiteFlix</span>
+  </header>
+  <section #section>
+    <span
+    class="latestUpdate"
+    > Latest update </span>
+    <div class="releaseDetails">
+      <span
+
+      > {{ mainMovie[0].name }}</span>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="handleWatchList(mainMovie[0])"
+      >
+        {{ handleWatchLIstThumbnail(mainMovie[0]) ? "Remove from" : "Add to" }}
+        Watchlist
+      </button>
+      <mat-icon
+        class="mainMovieIcon"
+        matTooltip="Info about the movie"
+        (click)="handleMoviePage(mainMovie[0])"
+        *ngIf="handleWatchLIstThumbnail(mainMovie[0])"
+        >watch_later</mat-icon
+      >
+    </div>
+  </section>
+  <main>
+    <div class="moviesWrapper">
+      <div class="releases">
+        <div class="sectionMovieWrapper">
+          <div class="movieSectinoHeader">
+            <span>Releases</span>
+            <div class="filterWrap">
+              <span>Ordered by: </span>
+              <mat-select
+                [(ngModel)]="selectedSortOption"
+                (selectionChange)="onSelectChange($event)"
+                placeholder="Order By:"
+              >
+                <mat-option *ngFor="let item of sortOption" [value]="item">
+                  {{ item }}
+                </mat-option>
+              </mat-select>
+            </div>
+          </div>
+
+          <div class="groupMovieWrapper">
+            <div
+              class="movieWrapper"
+              *ngFor="let movie of latestReleases; index as i"
+              #movieWrapper
+            >
+              <div class="actions">
+                <div class="watchList">
+                  <button
+                    (click)="handleWatchList(movie)"
+                    mat-raised-button
+                    color="primary"
+                  >
+                    {{
+                      handleWatchLIstThumbnail(movie) ? "Remove from" : "Add to"
+                    }}
+                    watchlist
+                  </button>
+                  <mat-icon
+                    matTooltip="Info about the movie"
+                    class="matIconCardMovie"
+                    *ngIf="handleWatchLIstThumbnail(movie)"
+                    (click)="handleMoviePage(movie)"
+                    >watch_later</mat-icon
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

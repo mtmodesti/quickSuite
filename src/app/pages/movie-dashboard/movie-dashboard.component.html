@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <header>
+    <span>QuickSuiteFlix</span>
+    <mat-icon
+    class="matIcon"
+    (click)="handleMoveHome()"
+    >home</mat-icon>
+
+  </header>
+  <section>
+    <div class="pictureWrapper" #movieImage></div>
+    <div class="contentWrapper">
+      <span>{{ selectedMovie.name }}</span>
+      <div>{{ selectedMovie.synopsis }}</div>
+    </div>
+  </section>
+</div>
