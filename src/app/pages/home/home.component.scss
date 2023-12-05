@@ -1,4 +1,5 @@
 @import "../../../assets/colors/colors.scss";
+@import "../../../assets/mixins/mixins.scss";
 
 .wrapper {
   width: 100vw;
@@ -39,11 +40,18 @@
     display: flex;
     flex-direction: row;
 
+    .latestUpdate {
+      @include titleStyle;
+    }
+
     .releaseDetails {
       display: flex;
       flex-direction: column;
       gap: 12px;
       height: 200px;
+      :nth-child(1){
+        @include textStyle
+      }
       button {
         width: 250px;
       }
@@ -105,7 +113,7 @@
           border: 1px solid $green3;
           border-radius: 8px;
           padding: 8px;
-
+          gap: 12px;
           .groupMovieWrapper {
             box-sizing: border-box;
             gap: 8px;

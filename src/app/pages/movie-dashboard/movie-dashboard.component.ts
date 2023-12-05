@@ -6,6 +6,7 @@ import {
   Renderer2,
   ViewChild,
 } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie-dashboard',
@@ -16,7 +17,7 @@ export class MovieDashboardComponent implements OnInit, AfterViewInit {
   selectedMovie = history.state.movieInfo;
   @ViewChild('movieImage') movieImage: ElementRef | undefined;
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2,  private router: Router) {}
 
   ngOnInit(): void {}
   ngAfterViewInit(): void {
@@ -32,5 +33,11 @@ export class MovieDashboardComponent implements OnInit, AfterViewInit {
       'background-image',
       `url(${this.selectedMovie.url}`
     );
+  }
+
+  handleMoveHome() {
+    console.log('e');
+    this.router.navigate(['']);
+
   }
 }
