@@ -2,15 +2,19 @@
 
 @mixin titleStyle {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 52px;
+  font-size: 25px;
   color: $green3;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
 }
 
 @mixin textStyle {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 20px;
-  color: $green1;
+  color: $green2;
   text-indent: 1.5em;
   text-align: justify;
 }

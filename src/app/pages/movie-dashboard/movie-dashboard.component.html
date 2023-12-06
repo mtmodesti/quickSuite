@@ -1,17 +1,31 @@
 <div class="wrapper">
   <header>
     <span>QuickSuiteFlix</span>
-    <mat-icon
-    class="matIcon"
-    (click)="handleMoveHome()"
-    >home</mat-icon>
-
+    <mat-icon class="matIcon" (click)="handleMoveHome()">home</mat-icon>
   </header>
   <section>
     <div class="pictureWrapper" #movieImage></div>
     <div class="contentWrapper">
-      <span>{{ selectedMovie.name }}</span>
-      <div>{{ selectedMovie.synopsis }}</div>
+      <span class="movieTitle">{{ selectedMovie.name }}</span>
+      <div class="movieInfo">{{ selectedMovie.synopsis }}</div>
+      <div class="infosWrapper">
+        <span>Genre: {{ selectedMovie.genre.join(", ") }}</span>
+        <span>Rating: {{ selectedMovie.rating }}</span>
+        <span
+          >Duration: {{ handleTransformString(selectedMovie.duration) }}</span
+        >
+        <span>Release Date: {{ selectedMovie.releaseDate }}</span>
+      </div>
+      <div class="movieTraielrWrapper">
+        <iframe
+          class="iframe"
+          height="315"
+          [src]="trailerLink"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
     </div>
   </section>
 </div>

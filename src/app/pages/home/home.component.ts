@@ -12,6 +12,8 @@ import { WatchListService } from 'src/app/services/watchlist.service';
 import { Router } from '@angular/router';
 import { MatSelectChange } from '@angular/material/select';
 
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -62,7 +64,6 @@ export class HomeComponent implements AfterViewInit {
 
   handleStartWatchList() {
     this.userWatchList = this.wls.getWatchList() || [];
-    console.log(this.userWatchList);
   }
 
   handleWatchList(movie: any) {

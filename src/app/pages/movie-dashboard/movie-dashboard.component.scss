@@ -20,12 +20,14 @@
     align-items: center;
     padding: 12px;
     box-sizing: border-box;
-    .matIcon{
+    .matIcon {
       cursor: pointer;
     }
   }
 
   section {
+    background-color: #49475b;
+
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -39,12 +41,9 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-
     }
     .contentWrapper {
       justify-content: center;
-      width: 100%;
-      height: 100%;
       box-sizing: border-box;
       padding: 12px;
       height: 85%;
@@ -52,16 +51,30 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
-      :nth-child(1) {
+
+      .movieTitle {
         @include titleStyle;
       }
-      :nth-child(2) {
-        margin-top: 5rem;
-        height: 600px;
-        overflow-x: hidden;
-        overflow-y: auto;
+      .movieInfo{
         @include textStyle;
 
+      }
+      .infosWrapper {
+        display: flex;
+        flex-direction: column;
+        color: $green3;
+        width: 250px;
+        span {
+          width: 250px;
+        }
+      }
+      .movieTraielrWrapper {
+        display: flex;
+        justify-content: center;
+        .iframe {
+          width: 560px;
+          max-width: 85vw;
+        }
       }
     }
   }
@@ -74,16 +87,16 @@
     padding: 12px !important;
     gap: 30px !important;
     .contentWrapper {
-      height: 45%;
+      width: auto !important;
+      height: auto !important;
+      justify-content: flex-start !important;
+      overflow: scroll;
       :nth-child(2) {
         margin-top: 0 !important;
       }
     }
   }
   .pictureWrapper {
-    height: 43% !important;
-  }
-  .contentWrapper {
     height: 43% !important;
   }
 }
